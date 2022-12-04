@@ -1,0 +1,13 @@
+# This code cannot be run directly through explorer
+
+def main():
+    def char_to_bcd(c):
+        return int(str(bin(ord(c)).replace("0b", "")))
+    with open("encrypted.txt", "r") as f:
+        letter = f.read()
+    with open("encrypted.txt", "w") as f:
+        f.write(" ".join(list(map(lambda x: str(char_to_bcd(x)), list(letter)))))
+        # f.write(str(int(c,2)))
+
+
+main()
