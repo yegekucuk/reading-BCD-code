@@ -12,6 +12,6 @@ def decode():
         print(p)
 
 
-# encode()
-decode()
-input()
+if __name__ == "__main__":
+    # encode()
+    decode()
